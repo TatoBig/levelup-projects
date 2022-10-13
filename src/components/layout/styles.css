@@ -1,0 +1,71 @@
+.layout-container {
+  padding: 4% 15% 5% 15%;
+}
+
+.layout-header {
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+}
+
+.layout-header__container {
+  width: fit-content;
+  position: relative;
+}
+
+.layout-header__animation_in {
+  width: 100%;
+  z-index: 20;
+  height: 100%;
+  position: absolute;
+  animation: animationIn 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s 1 normal forwards;
+}
+
+.layout-header__animation_out {
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  position: absolute;
+  background-color: beige;
+  animation: animationOut 2ms linear 2s 1 normal forwards;
+}
+
+.layout-header__title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.layout-divider {
+  width: 100%;
+  background-color: black;
+  height: 1px;
+  margin: 20px 0;
+}
+
+.layout-page {
+  margin: 0 6%;
+}
+
+@keyframes animationIn {
+  0% {
+    width: 0%;
+    background-color: black;
+  }
+  50% {
+    width: 100%;
+    background-color: black;
+  }
+  100% {
+    width: 0%;
+    background-color: black;
+  }
+}
+
+@keyframes animationOut {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
