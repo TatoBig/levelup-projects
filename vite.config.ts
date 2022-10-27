@@ -8,7 +8,8 @@ export default defineConfig({
   resolve: {
     alias: {
       '@components': resolve('./src/components'),
-      '@pages': resolve('./src/pages')
+      '@pages': resolve('./src/pages'),
+      '@styles': resolve('./src/styles')
     }
   }
 })

@@ -3,7 +3,6 @@
 }
 
 .layout-header {
-  background-color: red;
   display: flex;
   justify-content: space-between;
 }
@@ -13,15 +12,21 @@
   position: relative;
 }
 
-.layout-header__animation_in {
+.layout-header__container:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.layout-header__animationIn {
   width: 100%;
   z-index: 20;
   height: 100%;
   position: absolute;
-  animation: animationIn 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s 1 normal forwards;
+  animation: animationIn 2s cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s 1 normal
+    forwards;
 }
 
-.layout-header__animation_out {
+.layout-header__animationOut {
   width: 100%;
   z-index: 10;
   height: 100%;
@@ -35,6 +40,31 @@
   margin: 0;
 }
 
+.layout-header__menu {
+  display: flex;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.layout-header__menuItem {
+  font-size: 1.2rem;
+  margin: 0 1rem;
+}
+
+.layout-header__menuItem:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.layout-header__label {
+  font-size: 1.2rem;
+}
+
+.layout-header__itemContainer {
+  width: 100%;
+}
+
 .layout-divider {
   width: 100%;
   background-color: black;
@@ -44,6 +74,24 @@
 
 .layout-page {
   margin: 0 6%;
+}
+
+.layout-footer:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.layout-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  height: 40px; 
+  font-weight: bold;
 }
 
 @keyframes animationIn {

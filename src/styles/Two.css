@@ -1,0 +1,28 @@
+.two-background {
+  pointer-events: none;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.two-container {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.two-button:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.two-button {
+  font-size: 1.3rem;
+}
