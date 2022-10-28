@@ -2,49 +2,50 @@ import { useState } from 'react'
 import '@styles/Two.css'
 
 const Two = () => {
-  const [color, setColor] = useState<string>('rgb(245, 245, 220)')
-  const [colorName, setColorName] = useState<string>('Beige')
+  const [counter, setCounter] = useState<number>(0)
 
-  const randInt = () => Math.floor(Math.random() * 256)
-  const randomColor = async () => {
-    const generatedColor = `rgb(${randInt()},${randInt()},${randInt()})`
-    const link = `https://www.thecolorapi.com/id?rgb=${generatedColor}`
-    try {
-      console.log(link)
-      const response = await fetch(link)
-      const data = await response.json()
-      console.log(data)
-      setColor(generatedColor)
-      setColorName(data.name.value)
-    } catch (error) {
-      console.log(error)
+  const handleColor = () => {
+    if (counter === 0) {
+      return 'black'
+    }
+    if (counter > 0) {
+      return 'green'
+    }
+    if (counter < 0) {
+      return 'red'
     }
   }
 
   return (
     <div>
       <h1># Segundo proyecto</h1>
-      <h2>## Cambio de color de fondo con nombre</h2>
+      <h2>## Contador</h2>
       <p>
-        Para este ejercicio se utilizó la API de &quot;TheColorApi&quot; para
-        obtener el nombre de cada color que se genera de manera completamente
-        aleatoria
+        Este proyecto tiene contador que puede incrementar o decrementar
+        dependiendo de la opción que se elija, y el color del número va a variar
+        dependiendo del número actual que posea
       </p>
-      <p>
-        Para comenzar, presione el botón de cambiar de color para obtener
-        colores nuevos
-      </p>
-      <div
-        className="two-background"
-        style={{
-          backgroundColor: color
-        }}
-      />
       <div className="two-container">
-        <h1>{colorName}</h1>
-        <button className="two-button" onClick={() => randomColor()}>
-          Cambiar de color
-        </button>
+        <div className="two-counter" style={{ color: handleColor() }}>
+          <h1>{counter}</h1>
+        </div>
+        <div className="two-buttons">
+          <button
+            className="two-button"
+            onClick={() => setCounter(counter - 1)}
+          >
+            Decrementar
+          </button>
+          <button className="two-button" onClick={() => setCounter(0)}>
+            Reiniciar
+          </button>
+          <button
+            className="two-button"
+            onClick={() => setCounter(counter + 1)}
+          >
+            Incrementar
+          </button>
+        </div>
       </div>
     </div>
   )
