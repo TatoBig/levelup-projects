@@ -11,44 +11,49 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="layout-container">
-      <header className="layout-header">
-        <div className="layout-header__container" onClick={() => navigate('/')}>
-          <div className="layout-header__animationOut" />
-          <div className="layout-header__animationIn" />
-          <h1 className="layout-header__title">Proyectos Level Up</h1>
-        </div>
-        <div className="layout-header__menu">
-          <div className="layout-header__label">Proyectos</div>
-          <div className="layout-header__itemContainer">
-            <button
-              className="layout-header__menuItem"
-              onClick={() => navigate('/one')}
-            >
-              1
-            </button>
-            <button
-              className="layout-header__menuItem"
-              onClick={() => navigate('/two')}
-            >
-              2
-            </button>
-            <button
-              className="layout-header__menuItem"
-              onClick={() => navigate('/three')}
-            >
-              3
-            </button>
-            <button
-              className="layout-header__menuItem"
-              onClick={() => navigate('/four')}
-            >
-              4
-            </button>
+      <div className="layout-container__content">
+        <header className="layout-header">
+          <div
+            className="layout-header__container"
+            onClick={() => navigate('/')}
+          >
+            <div className="layout-header__animationOut" />
+            <div className="layout-header__animationIn" />
+            <h1 className="layout-header__title">Proyectos Level Up</h1>
           </div>
-        </div>
-      </header>
-      <div className="layout-divider" />
-      <main className="layout-page">{children}</main>
+          <div className="layout-header__menu">
+            <div className="layout-header__label">Proyectos</div>
+            <div className="layout-header__itemContainer">
+              <button
+                className="layout-header__menuItem"
+                onClick={() => navigate('/one')}
+              >
+                1
+              </button>
+              <button
+                className="layout-header__menuItem"
+                onClick={() => navigate('/two')}
+              >
+                2
+              </button>
+              <button
+                className="layout-header__menuItem"
+                onClick={() => navigate('/three')}
+              >
+                3
+              </button>
+              <button
+                className="layout-header__menuItem"
+                onClick={() => navigate('/four')}
+              >
+                4
+              </button>
+            </div>
+          </div>
+        </header>
+        <div className="layout-divider" />
+        <main className="layout-page">{children}</main>
+      </div>
       <footer className="layout-footer">
         <a href="https://github.com/TatoBig">Por Santiago Navas 2022</a>
       </footer>

@@ -1,0 +1,23 @@
+.one-button:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.one-button {
+  margin: 0 1rem;
+  font-size: 1.1rem;
+}
+
+.one-codebox {
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  padding: 1rem;
+  border: 1px solid;
+}
+
+.one-container__codebox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
