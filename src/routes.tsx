@@ -1,4 +1,3 @@
-import Layout from '@components/layout'
 import Four from '@pages/Four'
 import Three from '@pages/Three'
 import Two from '@pages/Two'
